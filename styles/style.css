@@ -1,0 +1,884 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Lato:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: 'Lato', sans-serif;
+  color: #000000;
+  font-size: 17px;
+  overflow-x: hidden; /* prevent horizontal scroll on mobile */
+}
+
+/* ===== HEADER ===== */
+.header {
+  background-color: #6B3F1E;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+/* LEFT SIDE */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  flex-shrink: 0; /* never shrink the logo */
+}
+
+.header-logo {
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+}
+
+.title .ministry {
+  font-size: 12px;
+  color: #ffffff;
+}
+
+.title .discover {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #C8A97E;
+}
+
+
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+/* Main links */
+.navbar a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 20px 14px;
+  text-transform: uppercase;
+  border-bottom: 3px solid transparent;
+  white-space: nowrap;
+}
+
+/* Hover effect */
+.navbar a:hover {
+  color: #C8A97E;
+  border-bottom: 3px solid #C8A97E;
+}
+
+/* ===== DROPDOWN ===== */
+.dropdown {
+  position: relative;
+}
+
+/* Hide dropdown */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: black;
+  min-width: 200px;
+  border-top: 3px solid #C8A97E;
+  z-index: 999;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Dropdown links */
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  font-size: 15px;
+  text-transform: none;
+  border-bottom: 1px solid rgba(200, 169, 126, 0.2);
+  white-space: nowrap;
+}
+
+/* Hover inside dropdown */
+
+
+.logo {
+  position: relative;
+  width: 100%;
+}
+
+.logo img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+}
+
+/* HERO OVERLAY */
+.ilocos-hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  padding: 20px;
+  max-width: 90%;
+  width: 100%;
+  background: none;
+  border: none;
+}
+
+/* TEXT STYLING */
+.ilocos-hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 100px;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.ilocos-hero h1 span {
+  color: #C8A97E;
+}
+
+.ilocos-tagline {
+  font-size: 22px;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.ilocos-intro {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* ===== PROVINCE INFO BOX ===== */
+.province-info-box {
+  display: inline-block;
+  background-color: rgba(107, 63, 30, 0.9);
+  border: 3px solid #C8A97E;
+  border-radius: 10px;
+  padding: 24px 100px;
+  text-align: left;
+}
+
+.province-icon {
+  font-size: 50px;
+  display: block;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.province-info-box p {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 2;
+}
+
+.province-info-box p span {
+  color: #C8A97E;
+  font-weight: 700;
+}
+
+/* ===== STATS BAR ===== */
+.province-stats-bar {
+  background-color: #B8202A;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 22px 40px;
+  gap: 12px;
+}
+
+.province-stat {
+  text-align: center;
+  flex: 1 1 120px;
+}
+
+.stat-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #F5ECD7;
+  text-transform: uppercase;
+}
+
+/* ===== GOLD DIVIDER ===== */
+.gold-divider {
+  height: 3px;
+  width: 100%;
+  background-color: #C8A97E;
+}
+
+/* ===== SECTION LABELS & HEADINGS ===== */
+.section-label {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #B8202A;
+  margin-bottom: 6px;
+  letter-spacing: 2px;
+}
+
+.section-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 40px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.section-heading span {
+  color: #B8202A;
+}
+
+/* ===== HISTORY SECTION ===== */
+.history-section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.history-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.history-text p {
+  font-size: 18px;
+  line-height: 1.9;
+  color: #000000;
+  margin-bottom: 18px;
+  text-align: justify;
+}
+
+.history-text p strong {
+  color: #B8202A;
+}
+
+/* ===== TIMELINE ===== */
+.vigan-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.timeline-entry {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding-bottom: 10px;
+}
+
+.timeline-year {
+  background-color: #B8202A;
+  color: #ffffff;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  min-width: 62px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.timeline-detail {
+  background-color: #F5ECD7;
+  padding: 10px 14px;
+  border-radius: 4px;
+  border-left: 3px solid #C8A97E;
+  font-size: 17px;
+  line-height: 1.6;
+  flex: 1;
+}
+
+/* ===== ILOCANO LANGUAGE SECTION ===== */
+.ilocano-bg {
+  background-color: #F5ECD7;
+  border-top: 3px solid #C8A97E;
+  border-bottom: 3px solid #C8A97E;
+  width: 100%;
+}
+
+.ilocano-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 30px;
+}
+
+.language-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.language-text p {
+  font-size: 18px;
+  line-height: 1.9;
+  margin-bottom: 18px;
+  text-align: justify;
+}
+
+.language-text p strong {
+  color: #B8202A;
+}
+
+/* ===== PHRASES BOX ===== */
+.phrases-box {
+  background-color: #ffffff;
+  border: 2px solid #C8A97E;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.phrases-heading {
+  background-color: #6B3F1E;
+  color: #C8A97E;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  padding: 18px 20px;
+  font-weight: 700;
+}
+
+.phrase-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 11px 20px;
+  border-bottom: 1px solid #F5ECD7;
+  font-size: 15px;
+  gap: 10px;
+}
+
+.phrase-row:last-child {
+  border-bottom: none;
+}
+
+.ilocano-word {
+  font-weight: 700;
+  color: #B8202A;
+  text-align: left;
+  flex: 1;
+}
+
+.phrase-translation {
+  color: #000000;
+  text-align: right;
+  flex: 1;
+}
+
+/* ===== TOURISM CATEGORY CARDS ===== */
+.tourism-categories {
+  padding: 60px 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+.category-card {
+  border: 2px solid #C8A97E;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #000000;
+  display: block;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.category-card:hover {
+  border-color: #B8202A;
+  transform: translateY(-3px);
+}
+
+.card-header {
+  padding: 20px 18px 15px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-top: 4px solid #C8A97E;
+}
+
+.card-emoji {
+  font-size: 34px;
+  flex-shrink: 0;
+}
+
+.card-header h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 25px;
+  color: #000000;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.card-header h3 span {
+  color: #B8202A;
+}
+
+.category-card p {
+  padding: 0 18px 14px;
+  font-size: 15px;
+  color: #000000;
+  line-height: 1.7;
+}
+
+.card-footer {
+  background-color: #F5ECD7;
+  padding: 9px 18px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #6B3F1E;
+  text-transform: uppercase;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #6B3F1E;
+  text-align: center;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+footer h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  color: #C8A97E;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+footer p {
+  font-size: 15px;
+  color: #ffffff;
+  line-height: 1.8;
+}
+
+
+/* ============================================================
+   RESPONSIVE BREAKPOINTS
+   ============================================================ */
+@media (max-width: 1024px) {
+  .header {
+    padding: 0 24px;
+  }
+
+  .navbar a {
+    padding: 20px 10px;
+    font-size: 13px;
+  }
+
+  .ilocos-hero h1 {
+    font-size: 72px;
+  }
+
+  .ilocos-tagline {
+    font-size: 18px;
+  }
+
+  .ilocos-intro {
+    font-size: 17px;
+  }
+
+  .history-section,
+  .tourism-categories {
+    padding: 50px 30px;
+  }
+
+  .ilocano-bg {
+    padding: 50px 30px;
+  }
+}
+
+/* ===== TABLET PORTRAIT — 768px and below ===== */
+@media (max-width: 768px) {
+
+  /* ----- HEADER & NAVBAR ----- */
+  .header {
+    padding: 0;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .header-left {
+    padding: 10px 16px;
+  }
+
+  /* Navbar: full width, wrapping row of links */
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #4a2a10;
+    border-top: 2px solid #C8A97E;
+    padding: 4px 0;
+  }
+
+  .navbar > a,
+  .dropdown > .dropdown-trigger {
+    padding: 10px 12px;
+    font-size: 12px;
+    white-space: nowrap;
+    border-bottom: none;
+    color: #ffffff;
+  }
+
+  /* Dropdowns: show below their trigger, full width */
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: #4a2a10;
+    border-top: 2px solid #C8A97E;
+    min-width: 160px;
+    z-index: 999;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-menu a {
+    display: block;
+    padding: 10px 14px;
+    font-size: 12px;
+    color: #F5ECD7;
+    border-bottom: 1px solid rgba(200, 169, 126, 0.15);
+    white-space: nowrap;
+  }
+
+  .dropdown-menu a:hover {
+    background-color: #6B3F1E;
+    color: #C8A97E;
+  }
+
+  /* ----- HERO ----- */
+  .logo img {
+    height: 85vh;
+    min-height: 480px;
+  }
+
+  .ilocos-hero {
+    max-width: 95%;
+    padding: 16px;
+  }
+
+  .ilocos-hero h1 {
+    font-size: 48px;
+    margin-bottom: 12px;
+  }
+
+  .ilocos-tagline {
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
+
+  .ilocos-intro {
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+
+  /* Info box full width */
+  .province-info-box {
+    display: block;
+    width: 100%;
+    padding: 18px 20px;
+    text-align: center;
+  }
+
+  .province-info-box p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  /* ----- STATS BAR ----- */
+  .province-stats-bar {
+    padding: 18px 16px;
+    gap: 16px;
+  }
+
+  .province-stat {
+    flex: 1 1 100px;
+  }
+
+  .stat-number {
+    font-size: 22px;
+  }
+
+  .stat-label {
+    font-size: 11px;
+  }
+
+  /* ----- SECTION HEADINGS ----- */
+  .section-heading {
+    font-size: 30px;
+  }
+
+  /* ----- HISTORY ----- */
+  .history-section {
+    padding: 40px 20px;
+    max-width: 100%;
+  }
+
+  .history-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .history-text p {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  /* ----- LANGUAGE ----- */
+  .ilocano-bg {
+    padding: 40px 20px;
+  }
+
+  .ilocano-inner {
+    max-width: 100%;
+  }
+
+  .language-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .language-text p {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  /* ----- CATEGORY CARDS ----- */
+  .tourism-categories {
+    padding: 40px 20px;
+    max-width: 100%;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ----- FOOTER ----- */
+  footer {
+    padding: 30px 16px;
+  }
+
+  footer h3 {
+    font-size: 20px;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+}
+
+/* ===== SMALL PHONES — 480px and below ===== */
+@media (max-width: 480px) {
+  .ilocos-hero h1 {
+    font-size: 34px;
+  }
+
+  .ilocos-tagline {
+    font-size: 13px;
+  }
+
+  .ilocos-intro {
+    font-size: 14px;
+  }
+
+  .section-heading {
+    font-size: 26px;
+  }
+
+  .section-label {
+    font-size: 11px;
+  }
+
+  .province-stats-bar {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .province-stat {
+    flex: none;
+    width: 100%;
+  }
+
+  .timeline-entry {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .timeline-year {
+    min-width: auto;
+    align-self: flex-start;
+  }
+
+  .phrase-row {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .phrase-translation {
+    text-align: left;
+    font-size: 13px;
+  }
+
+  .ilocano-word {
+    font-size: 14px;
+  }
+
+  .card-header h3 {
+    font-size: 18px;
+  }
+
+  .card-emoji {
+    font-size: 28px;
+  }
+
+  footer h3 {
+    font-size: 18px;
+  }
+}
+
+/* ===== LANDSCAPE PHONES — short viewport ===== */
+@media (max-width: 768px) and (orientation: landscape) {
+  .logo img {
+    height: 100vw;          /* allow scrolling through full hero on landscape */
+    min-height: 300px;
+  }
+
+  .ilocos-hero h1 {
+    font-size: 42px;
+  }
+}
+
+/* ===== SPOT CARD GRID ===== */
+.spots-section {
+  padding: 60px 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.spots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 28px;
+  margin-top: 30px;
+}
+
+.spot-card {
+  border: 2px solid #C8A97E;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.spot-card:hover {
+  border-color: #B8202A;
+}
+
+/* ===== PHOTO ===== */
+/* object-fit: cover = crops the image to fill the box without stretching */
+/* width: 100% = always fills the card width, even on small screens */
+.spot-photo {
+  padding: 7px 3px 0px;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  border-radius: 15px;
+}
+
+.spot-info {
+  padding: 18px 20px 22px;
+}
+
+.spot-number {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #B8202A;
+  margin-bottom: 5px;
+}
+
+.spot-info h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.spot-info h3 span {
+  color: #B8202A;
+}
+
+.spot-tag {
+  display: inline-block;
+  background-color: #6B3F1E;
+  color: #C8A97E;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.spot-info p {
+  font-size: 17px;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+/* ===== TIP BOX ===== */
+.tip-box {
+  background-color: #F5ECD7;
+  border-left: 4px solid #C8A97E;
+  padding: 20px 24px;
+  margin-top: 40px;
+}
+
+.tip-box p {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-top: 6px;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .spots-section { padding: 40px 20px; }
+  .spots-grid { grid-template-columns: 1fr; }
+}
