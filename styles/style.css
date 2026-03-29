@@ -11,7 +11,7 @@ body {
   font-family: 'Lato', sans-serif;
   color: #000000;
   font-size: 17px;
-  overflow-x: hidden; /* prevent horizontal scroll on mobile */
+  overflow-x: hidden;
 }
 
 /* ===== HEADER ===== */
@@ -26,13 +26,12 @@ body {
   gap: 0;
 }
 
-/* LEFT SIDE */
 .header-left {
   display: flex;
   align-items: center;
   gap: 12px;
   padding: 10px 0;
-  flex-shrink: 0; /* never shrink the logo */
+  flex-shrink: 0;
 }
 
 .header-logo {
@@ -53,15 +52,12 @@ body {
   color: #C8A97E;
 }
 
-
-
 /* ===== NAVBAR ===== */
 .navbar {
   display: flex;
   align-items: center;
 }
 
-/* Main links */
 .navbar a {
   text-decoration: none;
   color: #ffffff;
@@ -73,7 +69,6 @@ body {
   white-space: nowrap;
 }
 
-/* Hover effect */
 .navbar a:hover {
   color: #C8A97E;
   border-bottom: 3px solid #C8A97E;
@@ -84,7 +79,6 @@ body {
   position: relative;
 }
 
-/* Hide dropdown */
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -100,7 +94,6 @@ body {
   display: block;
 }
 
-/* Dropdown links */
 .dropdown-menu a {
   display: block;
   padding: 10px 15px;
@@ -110,9 +103,7 @@ body {
   white-space: nowrap;
 }
 
-/* Hover inside dropdown */
-
-
+/* ===== HERO ===== */
 .logo {
   position: relative;
   width: 100%;
@@ -125,7 +116,6 @@ body {
   display: block;
 }
 
-/* HERO OVERLAY */
 .ilocos-hero {
   position: absolute;
   top: 50%;
@@ -140,7 +130,6 @@ body {
   border: none;
 }
 
-/* TEXT STYLING */
 .ilocos-hero h1 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 100px;
@@ -312,7 +301,7 @@ body {
   flex: 1;
 }
 
-/* ===== ILOCANO LANGUAGE SECTION ===== */
+/* ===== LANGUAGE SECTION ===== */
 .ilocano-bg {
   background-color: #F5ECD7;
   border-top: 3px solid #C8A97E;
@@ -387,7 +376,7 @@ body {
   flex: 1;
 }
 
-/* ===== TOURISM CATEGORY CARDS ===== */
+/* ===== CATEGORY CARDS ===== */
 .tourism-categories {
   padding: 60px 30px;
   max-width: 1100px;
@@ -478,314 +467,7 @@ footer p {
   line-height: 1.8;
 }
 
-
-/* ============================================================
-   RESPONSIVE BREAKPOINTS
-   ============================================================ */
-@media (max-width: 1024px) {
-  .header {
-    padding: 0 24px;
-  }
-
-  .navbar a {
-    padding: 20px 10px;
-    font-size: 13px;
-  }
-
-  .ilocos-hero h1 {
-    font-size: 72px;
-  }
-
-  .ilocos-tagline {
-    font-size: 18px;
-  }
-
-  .ilocos-intro {
-    font-size: 17px;
-  }
-
-  .history-section,
-  .tourism-categories {
-    padding: 50px 30px;
-  }
-
-  .ilocano-bg {
-    padding: 50px 30px;
-  }
-}
-
-/* ===== TABLET PORTRAIT — 768px and below ===== */
-@media (max-width: 768px) {
-
-  /* ----- HEADER & NAVBAR ----- */
-  .header {
-    padding: 0;
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .header-left {
-    padding: 10px 16px;
-  }
-
-  /* Navbar: full width, wrapping row of links */
-  .navbar {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    background-color: #4a2a10;
-    border-top: 2px solid #C8A97E;
-    padding: 4px 0;
-  }
-
-  .navbar > a,
-  .dropdown > .dropdown-trigger {
-    padding: 10px 12px;
-    font-size: 12px;
-    white-space: nowrap;
-    border-bottom: none;
-    color: #ffffff;
-  }
-
-  /* Dropdowns: show below their trigger, full width */
-  .dropdown {
-    position: relative;
-  }
-
-  .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    display: none;
-    background-color: #4a2a10;
-    border-top: 2px solid #C8A97E;
-    min-width: 160px;
-    z-index: 999;
-  }
-
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-
-  .dropdown-menu a {
-    display: block;
-    padding: 10px 14px;
-    font-size: 12px;
-    color: #F5ECD7;
-    border-bottom: 1px solid rgba(200, 169, 126, 0.15);
-    white-space: nowrap;
-  }
-
-  .dropdown-menu a:hover {
-    background-color: #6B3F1E;
-    color: #C8A97E;
-  }
-
-  /* ----- HERO ----- */
-  .logo img {
-    height: 85vh;
-    min-height: 480px;
-  }
-
-  .ilocos-hero {
-    max-width: 95%;
-    padding: 16px;
-  }
-
-  .ilocos-hero h1 {
-    font-size: 48px;
-    margin-bottom: 12px;
-  }
-
-  .ilocos-tagline {
-    font-size: 15px;
-    margin-bottom: 18px;
-  }
-
-  .ilocos-intro {
-    font-size: 15px;
-    margin-bottom: 24px;
-  }
-
-  /* Info box full width */
-  .province-info-box {
-    display: block;
-    width: 100%;
-    padding: 18px 20px;
-    text-align: center;
-  }
-
-  .province-info-box p {
-    font-size: 14px;
-    line-height: 1.8;
-  }
-
-  /* ----- STATS BAR ----- */
-  .province-stats-bar {
-    padding: 18px 16px;
-    gap: 16px;
-  }
-
-  .province-stat {
-    flex: 1 1 100px;
-  }
-
-  .stat-number {
-    font-size: 22px;
-  }
-
-  .stat-label {
-    font-size: 11px;
-  }
-
-  /* ----- SECTION HEADINGS ----- */
-  .section-heading {
-    font-size: 30px;
-  }
-
-  /* ----- HISTORY ----- */
-  .history-section {
-    padding: 40px 20px;
-    max-width: 100%;
-  }
-
-  .history-layout {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .history-text p {
-    font-size: 16px;
-    text-align: left;
-  }
-
-  /* ----- LANGUAGE ----- */
-  .ilocano-bg {
-    padding: 40px 20px;
-  }
-
-  .ilocano-inner {
-    max-width: 100%;
-  }
-
-  .language-layout {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .language-text p {
-    font-size: 16px;
-    text-align: left;
-  }
-
-  /* ----- CATEGORY CARDS ----- */
-  .tourism-categories {
-    padding: 40px 20px;
-    max-width: 100%;
-  }
-
-  .category-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* ----- FOOTER ----- */
-  footer {
-    padding: 30px 16px;
-  }
-
-  footer h3 {
-    font-size: 20px;
-  }
-
-  footer p {
-    font-size: 14px;
-  }
-}
-
-/* ===== SMALL PHONES — 480px and below ===== */
-@media (max-width: 480px) {
-  .ilocos-hero h1 {
-    font-size: 34px;
-  }
-
-  .ilocos-tagline {
-    font-size: 13px;
-  }
-
-  .ilocos-intro {
-    font-size: 14px;
-  }
-
-  .section-heading {
-    font-size: 26px;
-  }
-
-  .section-label {
-    font-size: 11px;
-  }
-
-  .province-stats-bar {
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-  }
-
-  .province-stat {
-    flex: none;
-    width: 100%;
-  }
-
-  .timeline-entry {
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  .timeline-year {
-    min-width: auto;
-    align-self: flex-start;
-  }
-
-  .phrase-row {
-    flex-direction: column;
-    gap: 2px;
-  }
-
-  .phrase-translation {
-    text-align: left;
-    font-size: 13px;
-  }
-
-  .ilocano-word {
-    font-size: 14px;
-  }
-
-  .card-header h3 {
-    font-size: 18px;
-  }
-
-  .card-emoji {
-    font-size: 28px;
-  }
-
-  footer h3 {
-    font-size: 18px;
-  }
-}
-
-/* ===== LANDSCAPE PHONES — short viewport ===== */
-@media (max-width: 768px) and (orientation: landscape) {
-  .logo img {
-    height: 100vw;          /* allow scrolling through full hero on landscape */
-    min-height: 300px;
-  }
-
-  .ilocos-hero h1 {
-    font-size: 42px;
-  }
-}
-
-/* ===== SPOT CARD GRID ===== */
+/* ===== SPOT CARDS (landmarks, churches, etc.) ===== */
 .spots-section {
   padding: 60px 30px;
   max-width: 1100px;
@@ -809,9 +491,6 @@ footer p {
   border-color: #B8202A;
 }
 
-/* ===== PHOTO ===== */
-/* object-fit: cover = crops the image to fill the box without stretching */
-/* width: 100% = always fills the card width, even on small screens */
 .spot-photo {
   padding: 7px 3px 0px;
   width: 100%;
@@ -863,7 +542,6 @@ footer p {
   text-align: justify;
 }
 
-/* ===== TIP BOX ===== */
 .tip-box {
   background-color: #F5ECD7;
   border-left: 4px solid #C8A97E;
@@ -877,8 +555,123 @@ footer p {
   margin-top: 6px;
 }
 
-/* ===== MOBILE ===== */
+
+/* ============================================================
+   BREAKPOINT 1 — 1024px (tablets landscape)
+   ============================================================ */
+@media (max-width: 1024px) {
+  .header { padding: 0 24px; }
+  .navbar a { padding: 20px 10px; font-size: 13px; }
+  .ilocos-hero h1 { font-size: 72px; }
+  .ilocos-tagline { font-size: 18px; }
+  .ilocos-intro { font-size: 17px; }
+  .history-section, .tourism-categories { padding: 50px 30px; }
+  .ilocano-bg { padding: 50px 30px; }
+}
+
+/* ============================================================
+   BREAKPOINT 2 — 768px (tablets portrait & phones)
+   ============================================================ */
 @media (max-width: 768px) {
+
+  /* Header */
+  .header { padding: 0; flex-direction: column; align-items: stretch; }
+  .header-left { padding: 10px 16px; }
+
+  /* Navbar wraps into rows */
+  .navbar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #4a2a10;
+    border-top: 2px solid #C8A97E;
+    padding: 4px 0;
+  }
+  .navbar > a,
+  .dropdown > .dropdown-trigger { padding: 10px 12px; font-size: 12px; border-bottom: none; }
+
+  /* Dropdown stays absolute on tablet */
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #4a2a10;
+    border-top: 2px solid #C8A97E;
+    min-width: 160px;
+  }
+  .dropdown-menu a { padding: 10px 14px; font-size: 12px; color: #F5ECD7; }
+  .dropdown-menu a:hover { background-color: #6B3F1E; color: #C8A97E; }
+
+  /* Hero */
+  .logo img { height: 85vh; min-height: 480px; }
+  .ilocos-hero { max-width: 95%; padding: 16px; }
+  .ilocos-hero h1 { font-size: 48px; margin-bottom: 12px; }
+  .ilocos-tagline { font-size: 15px; margin-bottom: 18px; }
+  .ilocos-intro { font-size: 15px; margin-bottom: 24px; }
+
+  /* Info box */
+  .province-info-box { display: block; width: 100%; padding: 18px 20px; text-align: center; }
+  .province-info-box p { font-size: 14px; line-height: 1.8; }
+
+  /* Stats */
+  .province-stats-bar { padding: 18px 16px; gap: 16px; }
+  .province-stat { flex: 1 1 100px; }
+  .stat-number { font-size: 22px; }
+  .stat-label { font-size: 11px; }
+
+  /* Headings */
+  .section-heading { font-size: 30px; }
+
+  /* History */
+  .history-section { padding: 40px 20px; max-width: 100%; }
+  .history-layout { grid-template-columns: 1fr; gap: 32px; }
+  .history-text p { font-size: 16px; text-align: left; }
+
+  /* Language */
+  .ilocano-bg { padding: 40px 20px; }
+  .ilocano-inner { max-width: 100%; }
+  .language-layout { grid-template-columns: 1fr; gap: 32px; }
+  .language-text p { font-size: 16px; text-align: left; }
+
+  /* Cards */
+  .tourism-categories { padding: 40px 20px; max-width: 100%; }
+  .category-grid { grid-template-columns: 1fr; }
+
+  /* Spot cards */
   .spots-section { padding: 40px 20px; }
   .spots-grid { grid-template-columns: 1fr; }
+
+  /* Footer */
+  footer { padding: 30px 16px; }
+  footer h3 { font-size: 20px; }
+  footer p { font-size: 14px; }
+}
+
+
+@media (max-width: 480px) {
+  .ilocos-hero h1 { font-size: 34px; }
+  .ilocos-tagline { font-size: 13px; }
+  .ilocos-intro { font-size: 14px; }
+  .section-heading { font-size: 26px; }
+  .section-label { font-size: 11px; }
+
+  .province-stats-bar { flex-direction: column; align-items: center; gap: 14px; }
+  .province-stat { flex: none; width: 100%; }
+
+  .timeline-entry { flex-direction: column; gap: 6px; }
+  .timeline-year { min-width: auto; align-self: flex-start; }
+
+  .phrase-row { flex-direction: column; gap: 2px; }
+  .phrase-translation { text-align: left; font-size: 13px; }
+  .ilocano-word { font-size: 14px; }
+
+  .card-header h3 { font-size: 18px; }
+  .card-emoji { font-size: 28px; }
+  footer h3 { font-size: 18px; }
+}
+
+
+@media (max-width: 768px) and (orientation: landscape) {
+  .logo img { height: 100vw; min-height: 300px; }
+  .ilocos-hero h1 { font-size: 42px; }
 }
